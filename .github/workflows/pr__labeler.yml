@@ -180,7 +180,6 @@ jobs:
         if: |
           contains(github.event.comment.html_url, '/pull/') && 
           contains(github.event.comment.body, '/hold') && 
-          contains(github.event.comment.body, '/hold cancel') &&
           contains(steps.owners.outputs.reviewers, github.event.comment.user.login || 'null')
         uses: andymckay/labeler@master
         with:
